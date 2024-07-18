@@ -1,0 +1,363 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    overflow-y: auto;
+
+}
+/*Navigointi menu ja sen sisältö*/
+.topnav {
+    background-color: grey;
+    justify-content: space-around;
+    overflow: hidden;
+    position: fixed;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    height: 75px;
+    box-sizing: border-box;
+    padding: 0px 20px;
+}
+.menuItems{
+    background-color: grey;
+    flex-direction: column;
+    overflow: hidden;
+    position: fixed;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 11;
+    box-sizing: border-box;
+    padding: 40px 20px;
+    display: none;
+}
+.menuItems.open{
+    display: flex;
+}
+.menuItems a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    z-index: 2;
+    padding: 16px 20px;
+    font-size: 20px;
+}
+
+.topnav a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding: 16px 20px;
+    
+    
+}
+.topnav a:hover {
+    background-color: whitesmoke;
+    color: black;
+}
+.menuItems a:hover {
+    color: black;
+    background-color:whitesmoke ;
+}
+
+
+
+
+
+
+
+/* Etu näkymä*/
+
+/* Kuvat ja niiden sijainnit */
+.taustasijainti {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 550px; /* Max height of the background image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 75px;
+}
+
+.taustakuva {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    object-fit: cover;
+    z-index: 0;
+    height: 550px;
+}
+
+.paakuvasijainti {
+    position: absolute; /* Positioned relative to .taustasijainti */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+    margin-bottom: 40px;
+}
+
+.paakuva {
+    width: 250px;
+    height: auto;
+    border-radius: 10%;
+}
+
+/* Teksti */
+.content {
+    position: relative;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #fff;
+    font-size: 30px;
+    padding: 10px;
+    max-height: 100px;
+}
+
+
+
+
+/* Sivun Kontentti */
+.container {
+    display: flex;
+    margin-top: 630px;
+    justify-content: center;
+    gap: 50px;
+    padding: 100px;
+}
+.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    max-width: 300px;
+    text-align: center;
+    font-size: 20px;
+}
+.card h1{
+    margin-top:0;
+}
+.card p{
+    font-size: 20px;
+}
+
+.btn {
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 20px;
+}
+.btn:hover{
+    background-color: darkblue;
+}
+
+
+
+
+
+
+
+/* Sivun loppuosa*/
+.footer {
+    position: relative;
+    display: flex;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    background-color: darkgrey;
+    color: white;
+    text-align: center;
+    height: 175px;
+    margin: 0;  
+    justify-content: center; 
+ }
+ .footer p{
+    margin-top: 45px;
+    font-size: 22px;
+ }
+ .sininen-teksti{
+    color: blue;
+    padding-left: 5px;
+ }
+
+
+
+
+
+
+/*Nappi*/
+.icon  {
+    position: fixed;
+    align-items: center;
+    font-size: 20px;
+    top: 5px;
+    right: 5px;
+    box-sizing: b;
+    padding: 5px 5px;
+    color: black;
+    display: inline-block;
+    z-index: 2000;
+}
+
+.puh{
+    display: none;
+}
+.puhpsy{
+    display: none;
+}
+.sivu{
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Sopivat koot*/
+@media screen and (max-width: 768px) {
+    .topnav a {
+        display: none;
+    }
+    .menuItems{
+        display: none;
+    }
+    .topnav{
+        display: none;
+    }
+    .topnav{
+        display: none;
+    }
+    .taustakuva{
+        position: absolute;
+        top: 0;
+        left: 0;
+        max-width: 100%;
+        height: 100vh;
+        height: 350px;
+        z-index: 2;
+    }
+    .taustasijainti {
+        position: absolute;
+        left: 0;
+        top: 0;
+        max-width: 100%;
+        height: 350px; /* Max height of the background image */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0px;
+    }
+
+    .paakuvasijainti {
+        position: relative; /* Positioned relative to .taustasijainti */
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        top: 0;
+        left: 0;
+        z-index: 5;
+    }
+
+    .paakuva {
+        width: 200px;
+        height: auto;
+        border-radius: 10%;
+    }
+
+    /* Teksti */
+    .content {
+        position: relative;
+        margin-bottom: 0px;
+        text-align: center;
+        color: #fff;
+        font-size: 25px;
+        padding: 5px;
+        max-height: 100px;
+        margin-top: 50px;
+    }
+
+    .icon  {
+        position: fixed;
+        align-items: center;
+        font-size: 25px;
+        top: 5px;
+        left: 5px;
+        padding: 5px;
+        color: black;
+        display: block;
+        z-index: 2000;
+        width: 22px;
+        background-color: white ;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+
+    }
+    /* Sivun Kontentti */
+    .container {
+        position: relative;
+        display: flex;
+        margin-top: 400px;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+        padding: 0px;
+        margin-bottom: 40px;
+    }
+    .card {
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        max-width: 300px;
+        text-align: center;
+    }
+
+    .footer p{
+        margin-top: 25px;
+        font-size: 17px;
+     }
+
+
+
+
+}
